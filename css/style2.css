@@ -1,0 +1,18 @@
+.flex-container{
+    display: flex;/*ប្រើ  ​flexbox  */
+    justify-content: center; /* រៀបផ្ដេកកណ្ដាល */
+    align-items: center;/*រៀបបញ្ឈកណ្ដាល  */
+    flex-wrap: wrap; /* បត់ជាជួរ  */
+    gap: 50px;  /* គម្លាត */
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: darkturquoise;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}

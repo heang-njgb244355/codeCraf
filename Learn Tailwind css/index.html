@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Doppio+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<!--
+  
+     <div class="p-4 m-2">
+        <div  class="px-5 py-2  bg-blue-200">Welcome Tailwind css</div>
+     </div>
+     
+     <div>
+        <div  class=" shadow-xl"> Hello every one </div>
+
+        <img class="drop-shadow-lg" src="./img/person.jpg" />
+     </div>
+
+
+     <fieldset>
+  <legend>Published status</legend>
+  <input id="draft" class="peer/draft" type="radio" name="status" checked />
+  <label for="draft" class="peer-checked/draft:text-sky-500">Draft</label>
+  <input id="published" class="peer/published" type="radio" name="status" />
+  <label for="published" class="peer-checked/published:text-sky-500">Published</label>
+  <div class="hidden peer-checked/draft:block">Drafts are only visible to administrators.</div>
+  <div class="hidden peer-checked/published:block">Your post will be publicly visible on your site.</div>
+</fieldset>
+
+<div class="bg-blue-400  text-white  border-5  border-yellow-100  rounded-t-lg h-50 w-50 bg-gradient-to-r from-cyan-500 to-blue-500 ">
+   <div  class="bg-gradient-to-r from-purple-400 text-center">  Brother</div>
+   <img class="rounded-t-lg h-40  w-30" src="./person.jpg" />
+</div> -->
+
+<button type="button" class="inline-flex items-center px-4 py-2 bg-indigo-500 text-white font-semibold rounded-md shadow-md cursor-not-allowed opacity-75" disabled>
+  <svg class="animate-spin motion-reduce:hidden -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+  </svg>
+  Processing...
+</button>
+
+  <!--   Typography   (font   ,  text  leading   -  tracking )-->
+<div  class="font-sans text-lg  text-center  leading-6 tracking-wide ">
+   <p>Lorem ipsum dolor sit amet. </p>
+</div>
+
+<!--  Layout and flexbox/grid -->
+
+<div  class="  flex flex-row  justify-center  items-center gap-10   bg-red-200   ">
+   <div > item1  </div>
+   <div class=""> item2</div>
+   <div> item3 </div>
+</div>
+
+<!--  grid   -->
+<div class=" grid grid-cols-3 gap-4 bg-blue-300">
+   <div>item1</div>
+   <div>item2</div>
+   <div>item3</div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div class="bg-slate-100 p-4 rounded-md  flex flex-row  justify-center  items-center " >
+   <div class="flex-grow">1</div>
+   <div> 2</div>
+  </div>
+
+  <div class="bg-slate-100 p-4 rounded-md">Card 2</div>
+
+  <div class="bg-slate-100 p-4 rounded-md">Card 3</div>
+
+  <div class="bg-slate-100 p-4 rounded-md">Card 4</div>
+
+</div>
+
+<!--   Positioning   (absolute ,  relative ,  fixed )-->
+   <div  class="relative bg-green-300">
+      <div class="absolute top-0 left-0 bg-red-200"> Absolute</div>
+      <div class="fixed bottom-0 right-0 bg-blue-200 ">Fixed</div>
+      <div  class="sticky top ">Sticky</div>
+   </div>
+
+   <div class="relative inline-block">
+  <button class="bg-slate-200 p-2 rounded">Notifications</button>
+  <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">3</span>
+  <div  class="absolute -top-2  bg-blue-300  rounded-full  px-2 py-0.3">hi</div>
+
+</div>
+
+<!-- Display  and   visibility  (block ,  inline-block , hidden )-->
+
+<div  class=" block "> block</div>
+<div class="inline-block "> inline-block</div>
+<div  class="hidden"> Hidden</div>
+
+<div class="block md:hidden">
+  Visible only on small screens (e.g., Mobile menu button)
+</div>
+
+<!--  Understanding  Tailwind Mobile - first Apporach -->
+<div class="text-center sm:text-left">
+ <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, quibusdam.</p>
+</div>
+
+<!-- Break  point (sm , md  ,  lg ,  xl ,2xl) -->
+
+<div  class="  max-w-md  mx-auto bg-blue-300  sm:bg-green-500 md:bg-yello-500  lg:bg-red-300">
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, voluptatum?</p>
+</div>
+<!-- តម្រឹមកណ្ដាលប្រអប់ Form ដែលមានទទឹងអតិបរមា 448px -->
+<div class="max-w-md mx-auto bg-blue-200 p-3 rounded-lg shadow">
+  <h2>Login Form</h2>
+</div>
+
+<!--  using aspect-ratio  and object-fit  for imges 
+<div class="aspect-w-16 aspect-h-9">
+
+
+  <img  class="  object-conver" src="../img/images (2).jpg" alt="">
+</div>
+ -->
+
+
+<!--  Applying   responsive   class (md:w-1/2  . lg :flex )-->
+
+<div  class="w-full md:w-1/2  lg:flex">  <!-- ចែក​​  scean ជាពី​ w-1/2-->
+  <div class="bg-red-200 lg:flex">item 1</div>
+  <div class="bg-blue-300  lg:flex">item2</div>
+</div>
+
+<!--  button  (btn ,  hover: , focus: )-->
+  <!-- Group -->
+<div class=" inline-flex">
+  <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+    Prev
+  </button>
+  <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+    Next
+  </button>
+</div>
+ <!--  Form (input  textarea  ,  checkbox  ,   selecte)-->
+
+ <div>
+  <form action="">
+      <div>
+            <label for="">Username</label>
+            <input type="text">
+      </div>
+  </form>
+
+
+ </div>
+
+
+
+
+
+
+<!--
+<div class="relative max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+   Header 
+  <div class="sticky top-0 z-10 bg-slate-900 text-white px-4 py-3 font-bold text-lg shadow-sm">
+    Contacts
+  </div>-->
+
+  
+  
+  <!-- Scrollable List Container
+  <div class="max-h-80 overflow-y-auto divide-y divide-slate-100">
+    <div class="flex items-center gap-4 p-4 hover:bg-slate-50 transition-colors cursor-pointer">
+      <img class="w-12 h-12 rounded-full object-cover" src="/img/images (1).jpg" alt="Andrew Alfred" />
+      <strong class="text-slate-800 font-semibold">Andrew Alfred</strong>
+    </div>
+
+    <div class="flex items-center gap-4 p-4 hover:bg-slate-50 transition-colors cursor-pointer">
+      <img class="w-12 h-12 rounded-full object-cover" src="/img/images (2).jpg" alt="Debra Houston" />
+      <strong class="text-slate-800 font-semibold">Debra Houston</strong>
+    </div>
+
+    <div class="flex items-center gap-4 p-4 hover:bg-slate-50 transition-colors cursor-pointer">
+      <img class="w-12 h-12 rounded-full object-cover" src="/img/images (3).jpg" alt="Debra Houston" />
+      <strong class="text-slate-800 font-semibold">Debra Houston</strong>
+    </div>
+
+    <div class="flex items-center gap-4 p-4 hover:bg-slate-50 transition-colors cursor-pointer">
+      <img class="w-12 h-12 rounded-full object-cover" src="/img/images (4).jpg" alt="Debra Houston" />
+      <strong class="text-slate-800 font-semibold">Debra Houston</strong>
+    </div>
+
+    <div class="flex items-center gap-4 p-4 hover:bg-slate-50 transition-colors cursor-pointer">
+      <img class="w-12 h-12 rounded-full object-cover" src="/img/images (2).jpg" alt="Debra Houston" />
+      <strong class="text-slate-800 font-semibold">Debra Houston</strong>
+    </div>
+  </div>
+</div> -->
+
+
+ <!--   Form (input ,  textarea  , checkbox  , radio  ,  select)-->
+<form action="">
+  <input type="text"  placeholder="Enter your name">
+  <textarea  class =" border-2" id=""></textarea>
+  <div>
+      <input type="checkbox" >
+      <label for="">Follow me</label>
+  </div>
+
+  <div>
+       <select class="border-2 p-2" name="" id="">
+           <option value="">Yes</option>
+           <option value="">No</option>
+           <option value="">Agree</option>
+       </select>
+       <label for="">Do you love me</label>
+  </div>
+
+  <!-- card (shadow-lg , round-lg )-->
+
+<div class=" bg-gray-100 p-6 rounded-xl  shadow-sm  hover:shadow-md  transition duration-200">
+                     <img src="../img/images (4).jpg" alt="">
+                    <h3 class="text-xl mb-2   ">Loren   ,  input  </h3>
+                    <p  class="text-gray-600 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, at!</p>
+                </div>
+
+                <div class=" bg-gray-100 p-6 rounded-xl  shadow-sm  hover:shadow-md  transition duration-200">
+                     <img src="../img/images (2).jpg" alt="">
+                    <h3 class="text-xl mb-2   ">Loren   ,  input  </h3>
+                    <p  class="text-gray-600 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, at!</p>
+                </div>
+
+                <div class=" bg-gray-100 p-6 rounded-xl  shadow-sm  hover:shadow-md  transition duration-200">
+                   <img src="../img/images (3).jpg" alt="">
+                  <h3 class="text-xl mb-2   ">Loren   ,  input  </h3>
+                    <p  class="text-gray-600 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, at!</p>
+                </div>
+
+</form>
+</body>
+</html>

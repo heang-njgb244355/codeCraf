@@ -1,0 +1,30 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding:  0;
+    
+    
+}
+.type{
+    width: 200px;
+    height: 30px;
+    background-color: antiquewhite;
+}
+
+
+
+.box-model{
+    width: 300px;
+    height: 200px;
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid red;
+    text-align: center;
+
+    margin: 100px;
+
+}
+.p{
+    margin: 50px;
+    color: blue;
+}
