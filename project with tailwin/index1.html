@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heang | Full Stack Developer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eep2ff',
+                            100: '#e0e7ff',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white relative">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="#" class="text-xl sm:text-2xl font-bold tracking-tight text-white hover:text-indigo-400 transition-colors">
+                    Heang<span class="text-indigo-500">.dev</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">About</a>
+                    <a href="#skills" class="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Skills</a>
+                    <a href="#projects" class="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Projects</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Contact</a>
+                    <a href="#contact" class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-lg shadow-indigo-600/30 transition-all transform hover:-translate-y-0.5">Get In Touch</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Navigation Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+            <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Skills</a>
+            <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Projects</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact</a>
+            <a href="#contact" class="mobile-nav-link block text-center px-4 py-2.5 text-base font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-md">Get In Touch</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="min-h-[calc(100vh-5rem)] flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            <!-- Background Gradient Glows -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-indigo-600/20 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute bottom-10 right-10 w-[200px] h-[200px] bg-purple-600/10 rounded-full blur-2xl -z-10"></div>
+
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-sm font-medium">
+                        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                        <span>Available for Freelance & Full-time Roles</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Hi, I'm <span class="bg-gradient-to-r from-indigo-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">Heang</span>
+                    </h1>
+                    <p class="text-2xl sm:text-3xl text-slate-300 font-semibold">
+                        Full Stack Developer
+                    </p>
+
+                    <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Crafting beautiful, responsive, and scalable web applications. Passionate about modern architecture, high performance, and seamless user experiences.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl shadow-lg shadow-indigo-600/30 transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-briefcase mr-2"></i> View Work
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-slate-200 bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-xl hover:border-slate-600 transition-all">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Social Media Quick Links -->
+                    <div class="flex items-center justify-center lg:justify-start space-x-6 pt-6 text-slate-400">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 text-xl transition-colors" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 text-xl transition-colors" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 text-xl transition-colors" aria-label="Twitter Profile">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="mailto:heangkiki168@gmail.com" class="hover:text-indigo-400 text-xl transition-colors" aria-label="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avatar/Profile Image -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <!-- Glow Frame -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-800 shadow-2xl flex items-center justify-center">
+                            <img src="https://placehold.co/400x400/1e293b/818cf8?text=Heang" alt="Heang - Profile Avatar" class="w-full h-full object-cover rounded-full transform group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x400/1e293b/818cf8?text=Developer+Avatar'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-slate-900/50 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">About Me</h2>
+                    <div class="w-16 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                    <p class="text-slate-400 mt-4 text-lg">A quick look into who I am and what drives my web creation process.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 bg-slate-800/50 p-8 rounded-2xl border border-slate-700/60 shadow-xl space-y-4">
+                        <h3 class="text-2xl font-bold text-white mb-2">Driven by passion & clean software principles</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            Hello! I am a dedicated Full Stack Developer with a passion for transforming ideas into elegant digital solutions. I specialize in frontend design systems, interactive component development, and robust backend integrations.
+                        </p>
+                        <p class="text-slate-300 leading-relaxed">
+                            Whether building sleek single-page applications or managing complex frontend builds, my focus stays anchored on clean code architectures, fast performance, and accessible UI designs.
+                        </p>
+                    </div>
+
+                    <!-- Key Stats Grid -->
+                    <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
+                        <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700/50 flex items-center space-x-4">
+                            <div class="p-4 bg-indigo-500/10 rounded-lg text-indigo-400 text-2xl">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-extrabold text-white">3+</h4>
+                                <p class="text-sm text-slate-400 font-medium">Years Experience</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700/50 flex items-center space-x-4">
+                            <div class="p-4 bg-indigo-500/10 rounded-lg text-indigo-400 text-2xl">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-extrabold text-white">20+</h4>
+                                <p class="text-sm text-slate-400 font-medium">Completed Projects</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/80 p-6 rounded-xl border border-slate-700/50 flex items-center space-x-4">
+                            <div class="p-4 bg-indigo-500/10 rounded-lg text-indigo-400 text-2xl">
+                                <i class="fa-solid fa-smile-beam"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-extrabold text-white">15+</h4>
+                                <p class="text-sm text-slate-400 font-medium">Happy Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills / Tech Stack Section -->
+        <section id="skills" class="py-20 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Tech Stack & Skills</h2>
+                    <div class="w-16 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                    <p class="text-slate-400 mt-4 text-lg">Tools and technologies I rely on to build web applications.</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <!-- HTML5 Card -->
+                    <div class="p-6 bg-slate-800/40 hover:bg-slate-800/80 border border-slate-700/50 hover:border-indigo-500/50 rounded-2xl transition-all duration-300 text-center group hover:-translate-y-1">
+                        <i class="fa-brands fa-html5 text-4xl text-orange-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-lg font-semibold text-white">HTML5</h3>
+                        <p class="text-xs text-slate-400 mt-1">Semantic Markup</p>
+                    </div>
+
+                    <!-- CSS3 / Tailwind Card -->
+                    <div class="p-6 bg-slate-800/40 hover:bg-slate-800/80 border border-slate-700/50 hover:border-indigo-500/50 rounded-2xl transition-all duration-300 text-center group hover:-translate-y-1">
+                        <i class="fa-brands fa-css3-alt text-4xl text-sky-400 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-lg font-semibold text-white">Tailwind CSS</h3>
+                        <p class="text-xs text-slate-400 mt-1">Utility-First UI</p>
+                    </div>
+
+                    <!-- JavaScript Card -->
+                    <div class="p-6 bg-slate-800/40 hover:bg-slate-800/80 border border-slate-700/50 hover:border-indigo-500/50 rounded-2xl transition-all duration-300 text-center group hover:-translate-y-1">
+                        <i class="fa-brands fa-js text-4xl text-yellow-400 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-lg font-semibold text-white">JavaScript</h3>
+                        <p class="text-xs text-slate-400 mt-1">ES6+ & Async JS</p>
+                    </div>
+
+                    <!-- React Card -->
+                    <div class="p-6 bg-slate-800/40 hover:bg-slate-800/80 border border-slate-700/50 hover:border-indigo-500/50 rounded-2xl transition-all duration-300 text-center group hover:-translate-y-1">
+                        <i class="fa-brands fa-react text-4xl text-cyan-400 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-lg font-semibold text-white">React</h3>
+                        <p class="text-xs text-slate-400 mt-1">Frontend Apps</p>
+                    </div>
+
+                    <!-- Node.js Card -->
+                    <div class="p-6 bg-slate-800/40 hover:bg-slate-800/80 border border-slate-700/50 hover:border-indigo-500/50 rounded-2xl transition-all duration-300 text-center group hover:-translate-y-1">
+                        <i class="fa-brands fa-node-js text-4xl text-emerald-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-lg font-semibold text-white">Node.js</h3>
+                        <p class="text-xs text-slate-400 mt-1">Backend Runtime</p>
+                    </div>
+
+                    <!-- Git & GitHub Card -->
+                    <div class="p-6 bg-slate-800/40 hover:bg-slate-800/80 border border-slate-700/50 hover:border-indigo-500/50 rounded-2xl transition-all duration-300 text-center group hover:-translate-y-1">
+                        <i class="fa-brands fa-git-alt text-4xl text-rose-500 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-lg font-semibold text-white">Git & GitHub</h3>
+                        <p class="text-xs text-slate-400 mt-1">Version Control</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section id="projects" class="py-20 bg-slate-900/50 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Featured Projects</h2>
+                    <div class="w-16 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                    <p class="text-slate-400 mt-4 text-lg">Check out some of my recent work and side projects.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 flex flex-col group hover:-translate-y-1 shadow-lg">
+                        <div class="overflow-hidden relative h-52 bg-slate-900">
+                            <img src="https://placehold.co/600x400/1e293b/6366f1?text=E-Commerce+Dashboard" alt="E-Commerce Analytics Platform Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/6366f1?text=Project+1'">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">E-Commerce Analytics Platform</h3>
+                                <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                                    Full-featured dashboard with realtime charts, order tracking, product inventory metrics, and modern dark theme visuals.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#React</span>
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#Tailwind</span>
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#NodeJS</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <a href="#" class="flex-1 text-center py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-medium transition-colors shadow-md">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mr-1.5 text-xs"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 px-4 bg-slate-700/80 hover:bg-slate-700 text-slate-200 rounded-lg text-sm font-medium border border-slate-600/50 transition-colors">
+                                        <i class="fa-brands fa-github mr-1.5"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 flex flex-col group hover:-translate-y-1 shadow-lg">
+                        <div class="overflow-hidden relative h-52 bg-slate-900">
+                            <img src="https://placehold.co/600x400/1e293b/6366f1?text=Task+Management+App" alt="Task Management Platform Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/6366f1?text=Project+2'">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Interactive Kanban Task Manager</h3>
+                                <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                                    Productivity tool equipped with drag-and-drop boards, deadline alerts, priority badges, and local persistence.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#JavaScript</span>
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#Tailwind</span>
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#Git</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <a href="#" class="flex-1 text-center py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-medium transition-colors shadow-md">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mr-1.5 text-xs"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 px-4 bg-slate-700/80 hover:bg-slate-700 text-slate-200 rounded-lg text-sm font-medium border border-slate-600/50 transition-colors">
+                                        <i class="fa-brands fa-github mr-1.5"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 flex flex-col group hover:-translate-y-1 shadow-lg">
+                        <div class="overflow-hidden relative h-52 bg-slate-900">
+                            <img src="https://placehold.co/600x400/1e293b/6366f1?text=Weather+Forecast+App" alt="Realtime Weather Portal Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/6366f1?text=Project+3'">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Realtime Weather Portal</h3>
+                                <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                                    Responsive weather application providing detailed 7-day hourly updates, geolocation search, and humidity telemetry.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#React</span>
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#OpenWeatherAPI</span>
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#Tailwind</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <a href="#" class="flex-1 text-center py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-medium transition-colors shadow-md">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mr-1.5 text-xs"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 px-4 bg-slate-700/80 hover:bg-slate-700 text-slate-200 rounded-lg text-sm font-medium border border-slate-600/50 transition-colors">
+                                        <i class="fa-brands fa-github mr-1.5"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 flex flex-col group hover:-translate-y-1 shadow-lg">
+                        <div class="overflow-hidden relative h-52 bg-slate-900">
+                            <img src="https://placehold.co/600x400/1e293b/6366f1?text=Developer+Portfolio" alt="Personal Portfolio Showcase Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1e293b/6366f1?text=Project+4'">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Developer Portfolio Showcase</h3>
+                                <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                                    Ultra-fast lightweight single-page portfolio template built using utility-first styling with accessible controls.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#HTML5</span>
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#Tailwind</span>
+                                    <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-md border border-indigo-500/20">#JavaScript</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <a href="#" class="flex-1 text-center py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-medium transition-colors shadow-md">
+                                        <i class="fa-solid fa-arrow-up-right-from-square mr-1.5 text-xs"></i> Live Demo
+                                    </a>
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 px-4 bg-slate-700/80 hover:bg-slate-700 text-slate-200 rounded-lg text-sm font-medium border border-slate-600/50 transition-colors">
+                                        <i class="fa-brands fa-github mr-1.5"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Get In Touch</h2>
+                    <div class="w-16 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                    <p class="text-slate-400 mt-4 text-lg">Have a project idea or want to connect? Send a message below!</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Direct Contact Information -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60 flex items-start space-x-4">
+                            <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Email Address</h3>
+                                <p class="text-slate-400 text-sm mt-1">Direct inquiries or feedback</p>
+                                <a href="mailto:heangkiki168@gmail.com" class="text-indigo-400 hover:text-indigo-300 font-medium text-sm mt-2 inline-block">
+                                    heangkiki168@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60 flex items-start space-x-4">
+                            <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">Location</h3>
+                                <p class="text-slate-400 text-sm mt-1">Primary Base</p>
+                                <p class="text-slate-200 font-medium text-sm mt-2">Phnom Penh, Cambodia</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Info Card -->
+                        <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60">
+                            <h3 class="text-lg font-semibold text-white mb-3">Connect Online</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-700/60 hover:bg-indigo-600 text-slate-200 hover:text-white rounded-xl transition-all" aria-label="GitHub">
+                                    <i class="fa-brands fa-github text-xl"></i>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-700/60 hover:bg-indigo-600 text-slate-200 hover:text-white rounded-xl transition-all" aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin text-xl"></i>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-700/60 hover:bg-indigo-600 text-slate-200 hover:text-white rounded-xl transition-all" aria-label="Twitter">
+                                    <i class="fa-brands fa-x-twitter text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-7 bg-slate-800/50 p-8 rounded-2xl border border-slate-700/60 shadow-xl">
+                        <!-- Message Box Alert Container -->
+                        <div id="form-alert" class="hidden mb-6 p-4 rounded-xl text-sm font-medium"></div>
+
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+                                <input type="text" id="name" required placeholder="John Doe" class="w-full px-4 py-3 bg-slate-900/80 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
+                                <input type="email" id="email" required placeholder="john@example.com" class="w-full px-4 py-3 bg-slate-900/80 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                                <textarea id="message" rows="4" required placeholder="Hi Heang, I would like to discuss a project..." class="w-full px-4 py-3 bg-slate-900/80 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 px-6 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl shadow-lg shadow-indigo-600/30 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center">
+                                <i class="fa-solid fa-paper-plane mr-2"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-slate-500 text-sm">
+                &copy; 2026 Heang. All rights reserved. Built with Tailwind CSS.
+            </p>
+            <div class="flex space-x-6 text-slate-400">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        // Mobile Menu Toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when a nav link is tapped
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Contact Form Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            const name = document.getElementById('name').value;
+
+            // Display success message container
+            alertBox.classList.remove('hidden', 'bg-red-500/20', 'text-red-300', 'border-red-500/30');
+            alertBox.classList.add('bg-emerald-500/20', 'text-emerald-300', 'border', 'border-emerald-500/30');
+            alertBox.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Thank you, ${name}! Your message has been sent successfully.`;
+
+            // Reset Form Fields
+            document.getElementById('contact-form').reset();
+
+            // Auto-hide alert after 5 seconds
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
