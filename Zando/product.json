@@ -1,0 +1,224 @@
+[
+  {
+    "id": 1,
+    "brand": "ZANDO",
+    "name": "Fitted Cap-Sleeve Top",
+    "price": 10.76,
+    "originalPrice": 11.95,
+    "discount": 10,
+    "colors": [
+      { "name": "White", "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&auto=format&fit=crop" },
+      { "name": "Black", "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": [
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&auto=format&fit=crop"
+    ],
+    "category": "T-Shirts",
+    "breadcrumb": ["Home", "WOMEN", "Clothing", "T-Shirts", "Fitted Cap-Sleeve Top"]
+  },
+  {
+    "id": 2,
+    "brand": "ZANDO",
+    "name": "Wide Leg Trousers",
+    "price": 15.96,
+    "originalPrice": 19.95,
+    "discount": 20,
+    "colors": [
+      { "name": "Beige", "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&auto=format&fit=crop" },
+      { "name": "Black", "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": [
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&auto=format&fit=crop"
+    ],
+    "category": "Trousers",
+    "breadcrumb": ["Home", "WOMEN", "Clothing", "Trousers", "Wide Leg Trousers"]
+  },
+  {
+    "id": 3,
+    "brand": "ZANDO",
+    "name": "Satin Midi Skirt",
+    "price": 12.71,
+    "originalPrice": 14.95,
+    "discount": 15,
+    "colors": [
+      { "name": "Black", "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": [
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&auto=format&fit=crop"
+    ],
+    "category": "Skirts",
+    "breadcrumb": ["Home", "WOMEN", "Clothing", "Skirts", "Satin Midi Skirt"]
+  },
+  {
+    "id": 4,
+    "brand": "ZANDO",
+    "name": "Oversized Blazer",
+    "price": 22.46,
+    "originalPrice": 29.95,
+    "discount": 25,
+    "colors": [
+      { "name": "Black", "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&auto=format&fit=crop" },
+      { "name": "Navy", "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&auto=format&fit=crop"
+    ],
+    "category": "Blazers",
+    "breadcrumb": ["Home", "WOMEN", "Clothing", "Blazers", "Oversized Blazer"]
+  },
+  {
+    "id": 5,
+    "brand": "Palladium",
+    "name": "Palladium Revolt Sandal Mono Platform",
+    "price": 86,
+    "originalPrice": null,
+    "discount": null,
+    "colors": [
+      { "name": "Black", "image": "https://images.unsplash.com/photo-1543163521-1a362a9ff0c4?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["36", "37", "38", "39", "40"],
+    "images": [
+      "https://images.unsplash.com/photo-1543163521-1a362a9ff0c4?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&auto=format&fit=crop"
+    ],
+    "category": "Shoes",
+    "breadcrumb": ["Home", "WOMEN", "Shoes", "Sandals", "Palladium Revolt Sandal Mono Platform"]
+  },
+  {
+    "id": 6,
+    "brand": "Palladium",
+    "name": "Palladium Pampa Hi Zip",
+    "price": 92,
+    "originalPrice": null,
+    "discount": null,
+    "colors": [
+      { "name": "Black", "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["36", "37", "38", "39", "40"],
+    "images": [
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1543163521-1a362a9ff0c4?w=800&auto=format&fit=crop"
+    ],
+    "category": "Shoes",
+    "breadcrumb": ["Home", "WOMEN", "Shoes", "Boots", "Palladium Pampa Hi Zip"]
+  },
+  {
+    "id": 7,
+    "brand": "Palladium",
+    "name": "Palladium Pallashock Lo",
+    "price": 78,
+    "originalPrice": null,
+    "discount": null,
+    "colors": [
+      { "name": "White", "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["36", "37", "38", "39", "40"],
+    "images": [
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1543163521-1a362a9ff0c4?w=800&auto=format&fit=crop"
+    ],
+    "category": "Shoes",
+    "breadcrumb": ["Home", "WOMEN", "Shoes", "Sneakers", "Palladium Pallashock Lo"]
+  },
+  {
+    "id": 8,
+    "brand": "Palladium",
+    "name": "Palladium Crossbody Bag",
+    "price": 45,
+    "originalPrice": null,
+    "discount": null,
+    "colors": [
+      { "name": "Black", "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["One Size"],
+    "images": [
+      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop"
+    ],
+    "category": "Bags",
+    "breadcrumb": ["Home", "WOMEN", "Accessories", "Bags", "Palladium Crossbody Bag"]
+  },
+  {
+    "id": 9,
+    "brand": "Palladium",
+    "name": "Palladium Logo Cap",
+    "price": 28,
+    "originalPrice": null,
+    "discount": null,
+    "colors": [
+      { "name": "Black", "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["One Size"],
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop"
+    ],
+    "category": "Accessories",
+    "breadcrumb": ["Home", "WOMEN", "Accessories", "Caps", "Palladium Logo Cap"]
+  },
+  {
+    "id": 10,
+    "brand": "Palladium",
+    "name": "Palladium Easy Slip-On",
+    "price": 65,
+    "originalPrice": null,
+    "discount": null,
+    "colors": [
+      { "name": "Brown", "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["36", "37", "38", "39", "40"],
+    "images": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1543163521-1a362a9ff0c4?w=800&auto=format&fit=crop"
+    ],
+    "category": "Shoes",
+    "breadcrumb": ["Home", "WOMEN", "Shoes", "Slip-On", "Palladium Easy Slip-On"]
+  },
+  {
+    "id": 11,
+    "brand": "Palladium",
+    "name": "Palladium Field Jacket",
+    "price": 120,
+    "originalPrice": null,
+    "discount": null,
+    "colors": [
+      { "name": "Olive", "image": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": [
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&auto=format&fit=crop"
+    ],
+    "category": "Jackets",
+    "breadcrumb": ["Home", "WOMEN", "Clothing", "Jackets", "Palladium Field Jacket"]
+  },
+  {
+    "id": 12,
+    "brand": "Palladium",
+    "name": "Palladium Graphic Tee",
+    "price": 32,
+    "originalPrice": null,
+    "discount": null,
+    "colors": [
+      { "name": "White", "image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&auto=format&fit=crop" }
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": [
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&auto=format&fit=crop"
+    ],
+    "category": "T-Shirts",
+    "breadcrumb": ["Home", "WOMEN", "Clothing", "T-Shirts", "Palladium Graphic Tee"]
+  }
+]
