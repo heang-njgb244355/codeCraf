@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Brew & Bean</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coffee: {
+              50:  '#FAF7F2',
+              100: '#F3EDE4',
+              200: '#E8D9C4',
+              300: '#D4B896',
+              400: '#B8956A',
+              500: '#9A7349',
+              600: '#7A5A38',
+              700: '#5C4329',
+              800: '#3D2C1B',
+              900: '#241A10',
+            }
+          },
+          fontFamily: {
+            sans:  ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          },
+          boxShadow: {
+            'soft': '0 4px 20px rgba(36, 26, 16, 0.06)',
+            'card': '0 2px 12px rgba(36, 26, 16, 0.05)',
+            'lift': '0 12px 40px rgba(36, 26, 16, 0.12)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .product-card:hover .product-img { transform: scale(1.06); }
+    .product-card:hover { box-shadow: 0 12px 40px rgba(36, 26, 16, 0.12); transform: translateY(-4px); }
+  </style>
+</head>
+<body class="bg-coffee-50 text-coffee-900 font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 bg-coffee-900/95 backdrop-blur-md text-white border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-5 h-[68px] flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <span class="text-2xl">☕</span>
+        <span class="text-xl font-serif font-semibold tracking-tight group-hover:text-coffee-300 transition">Brew & Bean</span>
+      </a>
+      <div class="hidden md:flex items-center gap-9 text-[13px] font-medium tracking-wide">
+        <a href="index.html" class="text-white/70 hover:text-white transition">Home</a>
+        <a href="product.html" class="text-white transition">Product</a>
+        <a href="index.html#about" class="text-white/70 hover:text-white transition">About</a>
+        <a href="index.html#contact" class="text-white/70 hover:text-white transition">Contact</a>
+      </div>
+      <button onclick="toggleCart()" class="relative p-2.5 rounded-full hover:bg-white/10 transition" aria-label="Cart">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+        <span id="cart-badge" class="absolute -top-0.5 -right-0.5 bg-coffee-400 text-coffee-900 text-[10px] font-bold w-[18px] h-[18px] rounded-full flex items-center justify-center hidden">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-coffee-900 text-white py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-5 text-center">
+      <p class="text-coffee-400 text-xs tracking-[3px] uppercase font-medium mb-3">Full Menu</p>
+      <h1 class="font-serif text-3xl md:text-5xl font-semibold mb-4">All Products</h1>
+      <p class="text-white/60 text-base max-w-md mx-auto">Explore our complete selection of handcrafted coffee drinks and roasted beans</p>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <div class="bg-white border-b border-coffee-100 sticky top-[68px] z-40">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex gap-2 flex-wrap">
+        <button onclick="filterProducts('all')" class="filter-btn active px-4 py-1.5 rounded-full text-sm font-medium border border-coffee-800 bg-coffee-800 text-white transition" data-filter="all">All</button>
+        <button onclick="filterProducts('drink')" class="filter-btn px-4 py-1.5 rounded-full text-sm font-medium border border-coffee-200 text-coffee-600 hover:border-coffee-400 transition" data-filter="drink">Drinks</button>
+        <button onclick="filterProducts('beans')" class="filter-btn px-4 py-1.5 rounded-full text-sm font-medium border border-coffee-200 text-coffee-600 hover:border-coffee-400 transition" data-filter="beans">Beans</button>
+      </div>
+      <p id="product-count" class="text-sm text-coffee-400"></p>
+    </div>
+  </div>
+
+  <!-- ALL PRODUCTS -->
+  <section class="max-w-6xl mx-auto px-5 py-12 md:py-16">
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
+      <!-- Filled by JS -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-coffee-900 text-coffee-400">
+    <div class="max-w-6xl mx-auto px-5 py-12 grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div>
+        <h4 class="text-white font-serif font-semibold text-lg mb-4 flex items-center gap-2">☕ Brew & Bean</h4>
+        <p class="text-sm leading-relaxed text-coffee-400/80">Premium coffee roasted with love in the heart of Phnom Penh.</p>
+      </div>
+      <div>
+        <h4 class="text-white text-sm font-semibold tracking-wide mb-4">Quick Links</h4>
+        <a href="index.html" class="block text-sm mb-2.5 hover:text-white transition">Home</a>
+        <a href="product.html" class="block text-sm mb-2.5 hover:text-white transition">Products</a>
+        <a href="index.html#contact" class="block text-sm mb-2.5 hover:text-white transition">Contact</a>
+      </div>
+      <div>
+        <h4 class="text-white text-sm font-semibold tracking-wide mb-4">Follow Us</h4>
+        <a href="#" class="block text-sm mb-2.5 hover:text-white transition">Facebook</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-white transition">Instagram</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-white transition">TikTok</a>
+      </div>
+      <div>
+        <h4 class="text-white text-sm font-semibold tracking-wide mb-4">Newsletter</h4>
+        <p class="text-sm mb-3 text-coffee-400/80">Get 10% off your first order</p>
+        <div class="flex">
+          <input type="email" placeholder="Your email" class="flex-1 px-3.5 py-2.5 rounded-l-lg text-sm text-coffee-900 bg-white outline-none placeholder:text-coffee-300">
+          <button class="bg-coffee-500 hover:bg-coffee-400 text-white px-4 rounded-r-lg text-sm font-semibold transition">Join</button>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/5">
+      <div class="max-w-6xl mx-auto px-5 py-5 text-center text-xs text-coffee-500">
+        © 2026 Brew & Bean. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div id="detail-modal" class="fixed inset-0 bg-coffee-900/60 backdrop-blur-sm z-[60] hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto shadow-lift">
+      <div class="relative">
+        <img id="modal-image" src="" alt="" class="w-full h-56 object-cover rounded-t-2xl">
+        <button onclick="closeModal()" class="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-lg text-coffee-700 hover:bg-white transition shadow-sm">&times;</button>
+      </div>
+      <div class="p-6">
+        <h3 id="modal-name" class="font-serif text-2xl font-semibold text-coffee-800 mb-1"></h3>
+        <p id="modal-price" class="text-coffee-500 font-semibold text-lg mb-4"></p>
+        <p id="modal-desc" class="text-sm text-coffee-500 leading-relaxed mb-6"></p>
+        <button onclick="addFromModal()" class="w-full bg-coffee-800 hover:bg-coffee-700 text-white py-3.5 rounded-xl text-sm font-semibold tracking-wide transition">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART SIDEBAR -->
+  <div id="cart-overlay" class="fixed inset-0 bg-coffee-900/40 backdrop-blur-sm z-[70] hidden" onclick="toggleCart()"></div>
+  <div id="cart-sidebar" class="fixed top-0 right-0 w-full max-w-md h-full bg-white z-[80] shadow-lift transform translate-x-full transition-transform duration-300 ease-out flex flex-col">
+    <div class="flex items-center justify-between px-6 py-5 border-b border-coffee-100">
+      <h2 class="font-serif text-lg font-semibold text-coffee-800">Your Cart</h2>
+      <button onclick="toggleCart()" class="w-8 h-8 rounded-full hover:bg-coffee-50 flex items-center justify-center text-xl text-coffee-400 hover:text-coffee-800 transition">&times;</button>
+    </div>
+    <div id="cart-items" class="flex-1 overflow-y-auto px-6 py-5 space-y-4">
+      <p class="text-coffee-300 text-center py-16 text-sm">Your cart is empty</p>
+    </div>
+    <div id="order-form" class="border-t border-coffee-100 px-6 py-5 space-y-3 hidden">
+      <h3 class="text-sm font-semibold text-coffee-800 tracking-wide">Delivery Info</h3>
+      <input id="order-name" type="text" placeholder="Full Name *" class="w-full border border-coffee-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-coffee-500 focus:ring-2 focus:ring-coffee-500/20 transition">
+      <input id="order-phone" type="tel" placeholder="Phone Number *" class="w-full border border-coffee-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-coffee-500 focus:ring-2 focus:ring-coffee-500/20 transition">
+      <textarea id="order-address" rows="2" placeholder="Delivery Address *" class="w-full border border-coffee-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-coffee-500 focus:ring-2 focus:ring-coffee-500/20 transition resize-none"></textarea>
+      <div class="flex justify-between items-center pt-2 pb-1">
+        <span class="text-sm text-coffee-500">Total</span>
+        <span id="cart-total" class="text-lg font-semibold text-coffee-800">$0.00</span>
+      </div>
+      <button onclick="submitOrder()" id="order-btn" class="w-full bg-coffee-800 hover:bg-coffee-700 text-white py-3.5 rounded-xl text-sm font-semibold tracking-wide transition">
+        Order Now
+      </button>
+      <p id="order-status" class="text-sm text-center hidden"></p>
+    </div>
+  </div>
+
+  <script src="javascript.js"></script>
+  <script>
+    // Extra filter for product page
+    function filterProducts(type) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const isActive = btn.dataset.filter === type;
+        btn.classList.toggle('bg-coffee-800', isActive);
+        btn.classList.toggle('text-white', isActive);
+        btn.classList.toggle('border-coffee-800', isActive);
+        btn.classList.toggle('bg-transparent', !isActive);
+        btn.classList.toggle('text-coffee-600', !isActive);
+        btn.classList.toggle('border-coffee-200', !isActive);
+      });
+
+      const filtered = type === 'all' ? products : products.filter(p => p.category === type);
+      document.getElementById('product-count').textContent = `${filtered.length} products`;
+
+      document.getElementById('product-grid').innerHTML = filtered.map(p => `
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-coffee-100/80 shadow-card transition-all duration-300">
+          <div class="relative overflow-hidden h-52 bg-coffee-100">
+            <img src="${p.image}" alt="${p.name}" class="product-img w-full h-full object-cover transition-transform duration-500">
+            ${p.category === 'beans' ? '<span class="absolute top-3 left-3 bg-coffee-800 text-white text-[10px] font-semibold px-2.5 py-1 rounded-full tracking-wide">BEANS</span>' : ''}
+          </div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-3 mb-4">
+              <h3 class="font-semibold text-coffee-800 leading-snug">${p.name}</h3>
+              <span class="text-coffee-500 font-semibold whitespace-nowrap">$${p.price.toFixed(2)}</span>
+            </div>
+            <div class="flex gap-2.5">
+              <button onclick="openModal(${p.id})" class="flex-1 border border-coffee-200 text-coffee-700 hover:border-coffee-400 hover:bg-coffee-50 py-2.5 rounded-xl text-[13px] font-medium transition">View Detail</button>
+              <button onclick="addToCart(${p.id})" class="flex-1 bg-coffee-800 hover:bg-coffee-700 text-white py-2.5 rounded-xl text-[13px] font-medium transition">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Override render to show count + all products
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof products !== 'undefined') {
+        filterProducts('all');
+      }
+    });
+  </script>
+</body>
+</html>
